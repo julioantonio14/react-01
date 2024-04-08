@@ -43,7 +43,7 @@ export class Home extends Component {
     render() {
         const { posts, page, postsPerPage, allPosts, searchValue } = this.state;
         const moMorePosts = page + postsPerPage >= allPosts.length;
-        const filteredPosts = !!searchValue
+        const filteredPosts = searchValue
             ? allPosts.filter((post) => {
                   return post.title
                       .toLowerCase()
